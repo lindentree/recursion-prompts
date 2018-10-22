@@ -1,4 +1,4 @@
-/* jshint esversion: 6 */ 
+/* jshint esversion: 6 */  
 
 // Solve the following prompts using recursion.
 
@@ -81,15 +81,39 @@ var arraySum = function(array) {
 };
 
 // 4. Check if a number is even.
-var isEven = function(n) {
-};
-  // subtract 2 from n until we hit 0
+// subtract 2 from n until we hit 0
   // if the result is 0, it is even
   // if the result === 1  return false
+var isEven = function(n) {
+  if (n === 0) {
+  	return true;
+  }
+
+  if (n === - 1) {
+  	return false;
+  }
+
+  if (n < 0) {
+    return isEven(n+2);
+
+
+  } else {
+  	return isEven(n-2);
+  }
+
+
+};
+  
+  
 // 5. Sum all integers below a given integer.
 // sumBelow(10); // 45
 // sumBelow(7); // 21
+  
 var sumBelow = function(n) {
+  var sumIntegers = [];
+
+
+
 };
 
 // 6. Get the integers within a range (x, y).
