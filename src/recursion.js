@@ -31,7 +31,7 @@ var sum = function(array) {
   //return 0;
   //return array[n] + array[n-1]
 
-  var x = array.length;
+  let x = array.length;
 
   if (x === 0) {
     return 0;
@@ -65,7 +65,7 @@ var sum = function(array) {
 //second if check - element.length === undefined
 var arraySum = function(array) {
 
-  var sum = 0;
+  let sum = 0;
 
   for (var i = 0; i < array.length; i++) {
     if(Array.isArray(array[i])) {
@@ -126,7 +126,7 @@ var sumBelow = function(n) {
 // range(2,9); // [3,4,5,6,7,8]
 var range = function(x, y)  {  
 
- var rangedArr = []; 
+  let rangedArr = []; 
 
   if (x > y) {    
     if ((x - y) < 2) {
@@ -173,10 +173,17 @@ var exponent = function(base, exp) {
 // powerOfTwo(16); // true
 // powerOfTwo(10); // false
 var powerOfTwo = function(n) {
+  
 };
 
 // 9. Write a function that reverses a string.
 var reverse = function(string) {
+  if (string === "") {
+    return string;
+  } else {
+    return reverse(string.substring(1)) + string[0];
+  }
+
 };
 
 // 10. Write a function that determines if a string is a palindrome.
